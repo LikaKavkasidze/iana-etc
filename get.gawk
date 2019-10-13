@@ -16,7 +16,7 @@ BEGIN {
     socket = "/inet/tcp/0/" host "/80"
 
     print "Getting http://" host path file >"/dev/stderr"
-    printf "GET %s%s HTTP/1.0\r\nHost: %s\r\n\r\n", path, file, host |& socket
+    printf "GET %s%s HTTP/1.0\r\nHost: %s\r\nUser-Agent: Bot/IANA_etc\r\n\r\n", path, file, host |& socket
     printf "Request sent, waiting for data... " >"/dev/stderr"
 
     NR = 0
