@@ -42,11 +42,11 @@ clean:
 	    protocol-numbers.iana port-numbers.iana
 
 protocol-numbers.iana:
-	$(AWK) -f get.gawk -v file=protocol-numbers >protocol-numbers.iana
+	$(AWK) -f get.gawk -v file=protocol-numbers/protocol-numbers.xml >protocol-numbers.iana
 	rm -f protocol-numbers
 
 port-numbers.iana:
-	$(AWK) -f get.gawk -v file=port-numbers >port-numbers.iana
+	$(AWK) -f get.gawk -v file=service-names-port-numbers/service-names-port-numbers.xml >port-numbers.iana
 	rm -f port-numbers
 
 protocol-numbers:

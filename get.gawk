@@ -26,7 +26,7 @@ BEGIN {
 	NR++
 
 	if (in_content) { print }
-	if (/^$/)       { in_content=1 }
+	if (/^\r?$/)    { in_content=1 }
     }
 
     printf "\n" >"/dev/stderr"
